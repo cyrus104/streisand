@@ -7,8 +7,8 @@ Address = 10.192.122.{{ (item[0].item|int) + 1 }}/32
 # If the use of resolvconf is not desirable, simply remove the DNS line
 # and use a variant of the PostUp/PostDown lines above.
 # The IP address of the DNS server that is available via the encrypted
-# WireGuard interface is {{ dnsmasq_wireguard_ip }}.
-DNS = {{ dnsmasq_wireguard_ip }}
+# WireGuard interface is {{ unbound_wireguard_ip }}.
+DNS = {{ unbound_wireguard_ip }}
 PrivateKey = {{ item[1].stdout }}
 
 [Peer]
